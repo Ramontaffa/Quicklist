@@ -35,6 +35,11 @@ body {
   display: flex;
   flex-direction: column;
   margin-inline: auto;
+
+  @media (max-width: 80em) {
+    max-width: 627px;
+    width: calc(100% - 2rem);
+  }
 }
 
 h1 {
@@ -58,6 +63,8 @@ span {
   color: var(--content-secondary);
 }
 
-.none {
-  display: none;
+.desktop-only {
+  @media (max-width: 80em) {
+    display: none;
+  }
 }

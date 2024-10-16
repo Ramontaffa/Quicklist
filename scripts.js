@@ -16,7 +16,7 @@ form.addEventListener('submit', (e) => {
     const li = document.createElement('li');
     li.classList.add('list-itens');
 
-    // Cria o checkbox, o span e o botão de remoção
+    // adicionei o checkbox, o span e o botão de remoção
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.classList.add('checkbox');
@@ -30,7 +30,7 @@ form.addEventListener('submit', (e) => {
     img.alt = 'Button Icon';
     button.appendChild(img);
 
-    // Adiciona o evento de clique para cada botão de remoção
+    // criei o evento de clique para cada botão de remoção (armazena a posição do item removido)
     button.addEventListener('click', () => {
       const index = Array.from(ul.children).indexOf(li); // Armazena o índice do item removido
       removedItems.push({ element: li, index }); // Adiciona o item e seu índice à lista de itens removidos
@@ -48,7 +48,17 @@ form.addEventListener('submit', (e) => {
 
 // Mostra a mensagem de erro
 function showError() {
-  errorContainer.style.display = 'flex';
+  errorContainer.classList.add('visible'); // Adiciona a classe para mostrar a mensagem com transição
+  errorContainer.style.transition = 'opacity .5s ease-in-out';
+  errorContainer.style.opacity = '1'; 
+  
+  setTimeout(() => {
+    errorContainer.style.opacity = '0';
+  }, 4500);
+
+  setTimeout(() => {
+    errorContainer.classList.remove('visible');
+  }, 5000);
 }
 
 // Adiciona o evento de clique ao botão de desfazer
@@ -61,7 +71,7 @@ undoButton.addEventListener('click', () => {
       ul.appendChild(element); // Se o índice não for válido, adiciona ao final
     }
     if (removedItems.length === 0) {
-      errorContainer.style.display = 'none'; // Oculta a mensagem de erro se não houver itens removidos
+      errorContainer.classList.remove('visible'); // Remove a classe para ocultar a mensagem com transição
     }
   }
 });
