@@ -27,7 +27,17 @@ form {
       width: 461px;
       padding: .75rem;
       border-radius: 0.75rem;
-      border: 3px solid var(--border-primary);
+      border: 2.5px solid var(--border-primary);
+      transition: border 0.2s ease;
+
+      &:hover, &:focus {
+        border: 3px solid var(--border-hover);
+      }
+
+      &:focus {
+        outline: none;
+        border: 3px solid var(--color-brand);
+      }
     }
     
     #input::placeholder {
@@ -48,6 +58,11 @@ form {
       font-family: "inter", sans-serif;
       font-size: 1rem;
       line-height: 1.25rem;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: var(--color-brand-hover);
+      }
     }
   }
 
@@ -63,10 +78,16 @@ form {
       align-items: center;
       justify-content: center;
       gap: .75rem;
+      outline: 1.5px transparent;
       
       padding: .75rem 0rem .75rem 1rem;
       border-radius: 0.75rem;
       background-color: var(--bg-secondary);
+      transition: outline 0.3s ease-in-out;
+
+      &:has(input[type="checkbox"]:checked) {
+        outline: 1.5px solid var(--color-brand-hover);
+      }
       
       & .checkbox {
         appearance: none;
