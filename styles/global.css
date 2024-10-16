@@ -57,3 +57,7 @@ a {
 span {
   color: var(--content-secondary);
 }
+
+.none {
+  display: none;
+}
