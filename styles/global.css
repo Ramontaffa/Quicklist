@@ -30,6 +30,13 @@ body {
   background-color: var(--bg-primary);
 }
 
+.container {
+  max-width: 627px;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+}
+
 h1 {
   font-size: 1.5rem;
   font-weight: bold;
@@ -44,4 +51,9 @@ a {
   text-decoration: none;
   font-size: .875rem;
   line-height: 1rem;
+  color: var(--color-brand);
+}
+
+span {
+  color: var(--content-secondary);
 }

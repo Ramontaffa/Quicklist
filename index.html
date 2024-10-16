@@ -7,12 +7,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quicklist</title>
-  
+
   <link rel="stylesheet" href="./styles/index.css">  
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
 </head>
 <body>
+  <header><img src="./assets/logo.svg" alt="logo Quicklist"></header>
+
+  <div class="header-content container">
+    <a href="#"><- Voltar</a>
+    <h1>Compras da semana</h1>
+  </div>
+
+  <form class="container">
+
+    <div class="input-action">
+      <input type="text" id="input" placeholder="Adicione um novo item">
+      <button type="submit">Adicionar item</button>
+    </div>
+
+    <ul>
+      <li class="list-itens">
+        <div class="checkbox-container">
+          <img src="./assets/checkbox.svg" alt="">
+          <input type="checkbox" class="checkbox">
+        </div>
+        <span>aaaa</span>
+        <button>
+          <img src="./assets/trash.svg" alt="Button Icon">
+        </button>
+      </li>
+      <li class="list-itens">
+        <input type="checkbox" class="checkbox">
+        <span>aaaa</span>
+        <button><img src="./assets/trash.svg" alt="Button Icon"></button>
+      </li>
+      <li class="list-itens">
+        <input type="checkbox" class="checkbox">
+        <span>aaaa</span>
+        <button><img src="./assets/trash.svg" alt="Button Icon"></button>
+      </li>
+      <li class="list-itens">
+        <input type="checkbox" class="checkbox">
+        <span>aaaa</span>
+        <button><img src="./assets/trash.svg" alt="Button Icon"></button>
+      </li>
+      
+    </ul>
+  </form>
+
+  <div class="error container">
+    <img src="./assets/atention.svg" alt="atenção">
+    <label>O item foi removido da lista</label>
+    <button>
+      <img src="./assets/delete-small.svg" alt="">
+    </button>
+  </div>
   
 <script src="scripts.js"></script>
 </body>
