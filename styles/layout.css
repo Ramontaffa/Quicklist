@@ -28,6 +28,9 @@ form {
       padding: .75rem;
       border-radius: 0.75rem;
       border: 2.5px solid var(--border-primary);
+      font-family: "inter", sans-serif;
+      font-size: 1rem;
+      font-weight: normal;
       transition: border 0.2s ease;
 
       &:hover, &:focus {
@@ -184,6 +187,14 @@ form {
     border: none;
     background-color: unset;
     cursor: pointer;
+    align-items: center;
+    gap: .25rem;
+
+    & img {
+      width: 1.2rem;
+      height: 1.2rem;
+      margin-right: .2rem;
+    }
   }
 
   @media (max-width: 80em) {

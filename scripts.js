@@ -1,6 +1,7 @@
 const form = document.querySelector('form');
 const itenInput = document.getElementById('input');
 const ul = document.querySelector('ul');
+
 const errorContainer = document.querySelector('.error.container');
 const undoButton = errorContainer.querySelector('#undo-delete');
 let removedItems = []; // Armazena todos os itens removidos
@@ -68,7 +69,7 @@ undoButton.addEventListener('click', () => {
     if (index >= 0 && index < ul.children.length) {
       ul.insertBefore(element, ul.children[index]); // Insere na posição original
     } else {
-      ul.appendChild(element); // Se o índice não for válido, adiciona ao final
+      ul.appendChild(element); // Se o índice não for válido, adiciona ao final (*mudar para quando adicionar mais itens e desfazer a remoção voltar para a posição correta*)
     }
     if (removedItems.length === 0) {
       errorContainer.classList.remove('visible'); // Remove a classe para ocultar a mensagem com transição
