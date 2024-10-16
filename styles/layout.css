@@ -20,7 +20,7 @@ form {
     margin-bottom: 2.5rem;
 
     & #input {
-      width: 451px;
+      width: 461px;
       padding: .75rem;
       border-radius: 0.75rem;
       border: 3px solid var(--border-primary);
@@ -29,6 +29,7 @@ form {
     #input::placeholder {
       color: var(--content-tertiary);
       font-size: 1rem;
+      font-family: "inter", sans-serif;
     }
     
     & button {
@@ -37,9 +38,12 @@ form {
       cursor: pointer;
 
       border-radius: 0.75rem;
-      width: 160px;
+      width: 150px;
       font-weight: 600;
       color: #ffffff;
+      font-family: "inter", sans-serif;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
   }
 
@@ -51,33 +55,38 @@ form {
 
     & li {
       display: flex;
+      flex-direction: row;
       align-items: center;
-      padding: 1rem;
+      justify-content: center;
+      gap: .75rem;
+      
+      padding: .75rem 0rem .75rem 1rem;
       border-radius: 0.75rem;
       background-color: var(--bg-secondary);
-
-      & img {
-        cursor: pointer;
-        margin-right: .75rem;
+      
+      & .checkbox {
+        display: flex;
         align-items: center;
-      }
-
-
-
-      & input[type="checkbox"] {
-        /* cursor: pointer;
-        margin-right: .75rem;
-        border-radius: 2rem;
+        cursor: pointer;
         width: 1rem;
         height: 1rem;
-        border: 1px solid var(--border-primary); */
-        display: none;
+      }
+
+      & span {
+        align-items: center;
+        margin-right: auto;
       }
 
       & button {
-        margin-left: auto;
+        display: flex;
         border: none;
         background-color: unset;
+        cursor: pointer;
+
+        & img {
+          display: flex;
+          padding-inline: .75rem;
+        }
       }
     }
   }
@@ -93,13 +102,22 @@ form {
   padding: .75rem;
   margin-top: 2.25rem;
   color: #ffffff;
+  gap: .5rem;
 
   img {
     width: 1.5rem;
     height: 1.5rem;
-    margin-right: .5rem;
   }
+
+  label {
+    display: flex;
+    align-items: center;
+    margin-block: 0;
+    line-height: 1;
+  }
+
   & button {
+    display: flex;
     margin-left: auto;
     border: none;
     background-color: unset;
